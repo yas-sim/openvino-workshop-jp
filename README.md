@@ -1,4 +1,4 @@
-# openvino-workshop-en
+# openvino-workshop-jp
 
 ## Overview
 これはIntel distribution of OpenVINO toolkitのハンズオン・ワークショップコンテンツです。
