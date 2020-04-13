@@ -1,33 +1,55 @@
+# openvino-workshop-en
+
 ## Overview
-これはIntel DevCloud for the Edgeのハンズオン・ワークショップのコンテンツです。
+これはIntel distribution of OpenVINO toolkitのハンズオン・ワークショップコンテンツです。
+このワークショップコンテンツはUbuntuとWindows 10上で動作確認しています。
 
 ## Description
-Intel DevCloudはインテルが提供するクラウドサービスです。クラウド上にIntel distribution of OpenVINO toolkitがプリインストールされた様々な構成のハードウエアが用意されています。ユーザーはそれらを使いOpenVINOを使ったアプリケーションのテストやベンチマーキングを行うことが可能です。  
-[DevCloud for the Edge web page](https://devcloud.intel.com/edge/)
+[Intel distribution of OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit)はコンピュータービジョンアプリケーションのためのライブラリスイートです。OpenVINOは様々なライブラリやツールで構成されています。
+- Inference Engine - 高効率、高性能で柔軟性の高いディープラーニング推論ランタイムライブラリ
+- Model Optimizer - 一般的な学習済みディープラーニングモデルをOpenVINO IR形式に変換するツール
+- Model Downloader - OMZ(Open Model Zoo, Intel)モデルや一般的なパブリックディープラーニングモデルをダウンロードするツール
+- Deep Learning Workbench - モデルの再量子化(int8)、ベンチマーク、精度テストなどを行えるツール
+- OpenCV - 高性能、高機能な画像処理ライブラリ
 
-このワークショップを通して、下記のことを学ぶことができます。
-1.  Jupyter notebookの基本的な使い方 [jupyter-basic.ipynb](./jupyter-basic.ipynb)
-2.  DevCloudの基本的な使い方 [devcloud-basic.ipynb](./devcloud-basic.ipynb)
-3.  OpenVINO BenchmarkをDevCloudで実行する方法 [benchmarking.ipynb](./benchmarking.ipynb)
-4.  OpenVINOを使用するC++プロジェクトの作り方と、DevCloudでの実行方法 [cpp-project.ipynb](./cpp-project.ipynb)
-5. <おまけ> DevCloudでのテストを自動化する - [automated-testing.ipynb](automated-testing.ipynb)
+OpenVINOは高いスケーラビリティーを持っています。様々なディープラーニングプロセッサやアクセラレータをサポートします。一度書いたコードをほとんどをのまま別のプロセッサ上で走らせることも可能です。
+- CPU - AtomからXeonまで。OpenVINOは最新のDL Boost命令セットもサポートします
+- Integrated GPU - 内蔵GPUを活用しディープラーニング推論処理をCPUからオフロードすることも可能です
+- VPU - Vision Processing Unit (Myriad). 低消費電力かつ高性能なディープラーニングアクセラレーター
+- FPGA - OpenVINO互換FPGAアクセラレーターカードを使用可能
+- HDDL - High Density Deep Learning accelerator. 一つ、または複数のMyriadデバイスが搭載されたアクセラレーターカード
+
+また、OpenVINOは幅広いOSをサポートします。
+- Windows 10, Ubuntu, CentOS, MacOS
+
+このハンズオンワークショップを通して、下記の内容を習得可能です。
+1.  OpenVINO APIの基礎: 簡単な画像分類プログラム - [classification.ipynb](./classification.ipynb)
+2.  OpenVINOを使った物体検出プログラムの基礎 - [object-detection-ssd.ipynb](./object-detection-ssd.ipynb)
+3.  非同期推論実行方法の基礎 - [classification-async-single.ipynb](./classification-async-single.ipynb)
+4.  非同期推論、同時推論を使った高スループットアプリケーションの基礎 - [classification-async-multi.ipynb](./classification-async-multi.ipynb)
 
 ## How to use
-1. [DevCloud for the Edgeのweb page](https://devcloud.intel.com/edge/)に行き、sign-upし、アカウントを取得します
-2. DevCloud for the EdgeにSign-inします
-3. 'Advanced' - 'Connect and Create' を選択します
-4. Jupyter notebook、あるいはJupyterLabを選択します (お好みでどうぞ)
-5. Jupyterから、コマンドターミナルを開きます ('New' - 'Terminal')
-6. このプロジェクトをcloneします
+1. Intel distribution of OpenVINO toolkit [web page](https://software.intel.com/en-us/openvino-toolkit)に行き、お使いのOS用のOpenVINOパッケージをダウンロードする
+2. ['Get Started'](https://software.intel.com/en-us/openvino-toolkit/documentation/get-started)ページの手順に従ってOpenVINOをインストールする
+3. このレポジトリをクローンする
 ~~~shell
-$ git clone https://github.com/yas-sim/devcloud-workshop-en
+$ git clone https://github.com/yas-sim/openvino-workshop-en
 ~~~
-7. Jupyterで`devcloud-workshop-en/START-HERE.ipynb`を開きます
+4. コマンドターミナルを開く
+5. OpenVINO環境変数の設定を行う
+~~~
+Linux $ source /opt/intel/openvino/bin/setupvars.sh
+~~~
+~~~
+Windows > call "Program Files (x86)\IntelSWTools\OpenVINO\bin\setupvars.bat"
+~~~
+
+6. Jupyter notebookを開始する
+7. Jupyterで`openvino-workshop-jp/START-HERE.ipynb`を開く
 
 ## Requirement
-このワークショップコンテンツは[Intel DevCloud for the Edge](https://devcloud.intel.com/edge/)上で実行されることを想定しています。他のシステム上では正しく動きません。  
-[Intel distribution of OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit
-)が必要ですが、DevCloud for the Edge上のシステムにはすでにインストールされていますので、別途インストールを行う必要はありません。
+This workshop requires [Intel distribution of OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit
+).
 
 ## Contribution
 
