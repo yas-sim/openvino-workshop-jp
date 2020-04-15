@@ -33,7 +33,7 @@ OpenVINOは高いスケーラビリティーを持っています。様々なデ
 2. ['Get Started'](https://software.intel.com/en-us/openvino-toolkit/documentation/get-started)ページの手順に従ってOpenVINOをインストールする
 3. このレポジトリをクローンする
 ~~~shell
-$ git clone https://github.com/yas-sim/openvino-workshop-en
+$ git clone https://github.com/yas-sim/openvino-workshop-jp
 ~~~
 4. コマンドターミナルを開く
 5. OpenVINO環境変数の設定を行う
