@@ -42,6 +42,8 @@ Linux $ source /opt/intel/openvino/bin/setupvars.sh
 ~~~
 ~~~
 Windows > call "Program Files (x86)\IntelSWTools\OpenVINO\bin\setupvars.bat"
+   or
+Windows > call "Program Files (x86)\Intel\OpenVINO\bin\setupvars.bat"
 ~~~
 
 6. Jupyter notebookを開始する
@@ -49,7 +51,7 @@ Windows > call "Program Files (x86)\IntelSWTools\OpenVINO\bin\setupvars.bat"
 
 ## Requirement
 This workshop requires [Intel distribution of OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit
-). OpenVINO 2020.1 で動作確認しています。
+). OpenVINO 2021.3 で動作確認しています。
 
 ## Contribution
 
